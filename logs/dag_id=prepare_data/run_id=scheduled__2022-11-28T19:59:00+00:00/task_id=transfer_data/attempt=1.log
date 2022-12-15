@@ -1,0 +1,16 @@
+[2022-12-03 15:12:42,136] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-11-28T19:59:00+00:00 [queued]>
+[2022-12-03 15:12:42,447] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-11-28T19:59:00+00:00 [queued]>
+[2022-12-03 15:12:42,447] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-03 15:12:42,477] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-03 15:12:42,477] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-03 15:12:43,066] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): transfer_data> on 2022-11-28 19:59:00+00:00
+[2022-12-03 15:12:43,261] {standard_task_runner.py:52} INFO - Started process 1350 to run task
+[2022-12-03 15:12:43,434] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'transfer_data', 'scheduled__2022-11-28T19:59:00+00:00', '--job-id', '433', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmpjga2vxfm', '--error-file', '/tmp/tmpm1kadqrf']
+[2022-12-03 15:12:43,569] {standard_task_runner.py:80} INFO - Job 433: Subtask transfer_data
+[2022-12-03 15:12:44,572] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2022-12-03 15:12:45,348] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 1350. PIDs of all processes in the group: [1350]
+[2022-12-03 15:12:45,349] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 1350
+[2022-12-03 15:12:46,652] {process_utils.py:75} INFO - Process psutil.Process(pid=1350, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='15:12:42') (1350) terminated with exit code Negsignal.SIGTERM
+[2022-12-03 15:12:46,764] {local_task_job.py:156} INFO - Task exited with return code 143

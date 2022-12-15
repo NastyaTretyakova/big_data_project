@@ -1,0 +1,17 @@
+[2022-12-12 14:23:52,892] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-12-12T14:22:00+00:00 [queued]>
+[2022-12-12 14:23:53,038] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-12-12T14:22:00+00:00 [queued]>
+[2022-12-12 14:23:53,050] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 14:23:53,050] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 14:23:53,050] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 14:23:53,456] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): transfer_data> on 2022-12-12 14:22:00+00:00
+[2022-12-12 14:23:53,638] {standard_task_runner.py:52} INFO - Started process 3469 to run task
+[2022-12-12 14:23:53,978] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'transfer_data', 'scheduled__2022-12-12T14:22:00+00:00', '--job-id', '1099', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmpcyc9v30w', '--error-file', '/tmp/tmp96_gmu8q']
+[2022-12-12 14:23:54,080] {standard_task_runner.py:80} INFO - Job 1099: Subtask transfer_data
+[2022-12-12 14:23:59,261] {task_command.py:369} INFO - Running <TaskInstance: prepare_data.transfer_data scheduled__2022-12-12T14:22:00+00:00 [running]> on host b778137d8ea6
+[2022-12-12 14:24:02,542] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2022-12-12 14:24:06,494] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 3469. PIDs of all processes in the group: [3469]
+[2022-12-12 14:24:07,605] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 3469
+[2022-12-12 14:24:09,218] {process_utils.py:75} INFO - Process psutil.Process(pid=3469, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='14:23:53') (3469) terminated with exit code Negsignal.SIGTERM
+[2022-12-12 14:24:10,728] {local_task_job.py:156} INFO - Task exited with return code 143

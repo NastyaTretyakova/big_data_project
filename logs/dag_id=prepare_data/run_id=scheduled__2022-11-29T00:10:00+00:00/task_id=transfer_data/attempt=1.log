@@ -1,0 +1,26 @@
+[2022-12-12 13:14:14,454] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-11-29T00:10:00+00:00 [queued]>
+[2022-12-12 13:14:14,914] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-11-29T00:10:00+00:00 [queued]>
+[2022-12-12 13:14:14,914] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 13:14:14,914] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 13:14:14,914] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 13:14:15,924] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): transfer_data> on 2022-11-29 00:10:00+00:00
+[2022-12-12 13:14:16,286] {standard_task_runner.py:52} INFO - Started process 2187 to run task
+[2022-12-12 13:14:16,443] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'transfer_data', 'scheduled__2022-11-29T00:10:00+00:00', '--job-id', '785', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmphxmdsk_6', '--error-file', '/tmp/tmp36a7cxvz']
+[2022-12-12 13:14:16,444] {standard_task_runner.py:80} INFO - Job 785: Subtask transfer_data
+[2022-12-12 13:14:18,698] {task_command.py:369} INFO - Running <TaskInstance: prepare_data.transfer_data scheduled__2022-11-29T00:10:00+00:00 [running]> on host b778137d8ea6
+[2022-12-12 13:14:20,761] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=prepare_data
+AIRFLOW_CTX_TASK_ID=transfer_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-29T00:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-29T00:10:00+00:00
+[2022-12-12 13:14:20,875] {base.py:68} INFO - Using connection ID 'postgres_default' for task execution.
+[2022-12-12 13:14:21,252] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-12 13:14:21,664] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=prepare_data, task_id=transfer_data, execution_date=20221129T001000, start_date=20221212T131414, end_date=20221212T131421
+[2022-12-12 13:14:22,316] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2022-12-12 13:14:22,330] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 2187. PIDs of all processes in the group: [2187]
+[2022-12-12 13:14:22,330] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 2187
+[2022-12-12 13:14:22,492] {process_utils.py:75} INFO - Process psutil.Process(pid=2187, status='terminated', exitcode=0, started='13:14:15') (2187) terminated with exit code 0

@@ -1,0 +1,5 @@
+[2022-11-28 17:05:34,743] {processor.py:153} INFO - Started process (PID=3012) to work on /opt/airflow/dags/prepare_data.py
+[2022-11-28 17:05:34,747] {processor.py:641} INFO - Processing file /opt/airflow/dags/prepare_data.py for tasks to queue
+[2022-11-28 17:05:34,750] {logging_mixin.py:115} INFO - [2022-11-28 17:05:34,750] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/prepare_data.py
+[2022-11-28 17:05:34,798] {processor.py:651} INFO - DAG(s) dict_keys(['prepare_data']) retrieved from /opt/airflow/dags/prepare_data.py
+[2022-11-28 17:05:34,854] {logging_mixin.py:115} INFO - [2022-11-28 17:05:34,854] {dag.py:2371} INFO - Sync 1 DAGs

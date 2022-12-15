@@ -1,0 +1,108 @@
+[2022-12-03 14:44:59,002] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [queued]>
+[2022-12-03 14:44:59,040] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [queued]>
+[2022-12-03 14:44:59,040] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-03 14:44:59,041] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-03 14:44:59,041] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-03 14:44:59,079] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_table> on 2022-11-28 17:00:00+00:00
+[2022-12-03 14:44:59,086] {standard_task_runner.py:52} INFO - Started process 317 to run task
+[2022-12-03 14:44:59,098] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'create_table', 'scheduled__2022-11-28T17:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmp325vupv8', '--error-file', '/tmp/tmpwx0jmg__']
+[2022-12-03 14:44:59,101] {standard_task_runner.py:80} INFO - Job 28: Subtask create_table
+[2022-12-03 14:44:59,540] {task_command.py:369} INFO - Running <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [running]> on host b41792e8e843
+[2022-12-03 14:45:00,775] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=prepare_data
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T17:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-28T17:00:00+00:00
+[2022-12-03 14:45:01,457] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_default` isn't defined
+[2022-12-03 14:45:01,544] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=prepare_data, task_id=create_table, execution_date=20221128T170000, start_date=20221203T144459, end_date=20221203T144501
+[2022-12-03 14:45:01,696] {standard_task_runner.py:97} ERROR - Failed to execute job 28 for task create_table (The conn_id `postgres_default` isn't defined; 317)
+[2022-12-03 14:45:01,770] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-12-03 14:45:02,633] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-12 12:30:40,049] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [queued]>
+[2022-12-12 12:30:40,481] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [queued]>
+[2022-12-12 12:30:40,481] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 12:30:40,492] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 12:30:40,503] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 12:30:40,939] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_table> on 2022-11-28 17:00:00+00:00
+[2022-12-12 12:30:41,063] {standard_task_runner.py:52} INFO - Started process 314 to run task
+[2022-12-12 12:30:41,078] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'create_table', 'scheduled__2022-11-28T17:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmpy4mxmj7b', '--error-file', '/tmp/tmpzra4mx95']
+[2022-12-12 12:30:41,145] {standard_task_runner.py:80} INFO - Job 28: Subtask create_table
+[2022-12-12 12:30:43,210] {task_command.py:369} INFO - Running <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [running]> on host b778137d8ea6
+[2022-12-12 12:30:46,106] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=prepare_data
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T17:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-28T17:00:00+00:00
+[2022-12-12 12:30:47,049] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_default` isn't defined
+[2022-12-12 12:30:47,192] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=prepare_data, task_id=create_table, execution_date=20221128T170000, start_date=20221212T123040, end_date=20221212T123047
+[2022-12-12 12:30:47,446] {standard_task_runner.py:97} ERROR - Failed to execute job 28 for task create_table (The conn_id `postgres_default` isn't defined; 314)
+[2022-12-12 12:30:47,501] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-12-12 12:30:48,240] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-12 15:15:08,716] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [queued]>
+[2022-12-12 15:15:11,434] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [queued]>
+[2022-12-12 15:15:11,434] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 15:15:11,434] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 15:15:11,434] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 15:15:14,077] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_table> on 2022-11-28 17:00:00+00:00
+[2022-12-12 15:15:15,167] {standard_task_runner.py:52} INFO - Started process 352 to run task
+[2022-12-12 15:15:15,945] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'create_table', 'scheduled__2022-11-28T17:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmpc2e2yopi', '--error-file', '/tmp/tmpxmy3p30r']
+[2022-12-12 15:15:16,257] {standard_task_runner.py:80} INFO - Job 28: Subtask create_table
+[2022-12-12 15:15:22,948] {task_command.py:369} INFO - Running <TaskInstance: prepare_data.create_table scheduled__2022-11-28T17:00:00+00:00 [running]> on host d4eb34144d92
+[2022-12-12 15:15:32,340] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=prepare_data
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T17:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-28T17:00:00+00:00
+[2022-12-12 15:15:33,181] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_default` isn't defined
+[2022-12-12 15:15:33,484] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=prepare_data, task_id=create_table, execution_date=20221128T170000, start_date=20221212T151508, end_date=20221212T151533
+[2022-12-12 15:15:34,302] {standard_task_runner.py:97} ERROR - Failed to execute job 28 for task create_table (The conn_id `postgres_default` isn't defined; 352)
+[2022-12-12 15:15:34,471] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-12-12 15:15:37,194] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2022-12-12 13:10:37,052] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-11-28T23:51:00+00:00 [queued]>
+[2022-12-12 13:10:37,218] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: prepare_data.transfer_data scheduled__2022-11-28T23:51:00+00:00 [queued]>
+[2022-12-12 13:10:37,218] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 13:10:37,246] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 13:10:37,251] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 13:10:37,385] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): transfer_data> on 2022-11-28 23:51:00+00:00
+[2022-12-12 13:10:37,426] {standard_task_runner.py:52} INFO - Started process 2027 to run task
+[2022-12-12 13:10:37,422] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'prepare_data', 'transfer_data', 'scheduled__2022-11-28T23:51:00+00:00', '--job-id', '720', '--raw', '--subdir', 'DAGS_FOLDER/prepare_data.py', '--cfg-path', '/tmp/tmpv6m1lulx', '--error-file', '/tmp/tmpucz1ty_4']
+[2022-12-12 13:10:37,452] {standard_task_runner.py:80} INFO - Job 720: Subtask transfer_data
+[2022-12-12 13:10:38,055] {task_command.py:369} INFO - Running <TaskInstance: prepare_data.transfer_data scheduled__2022-11-28T23:51:00+00:00 [running]> on host b778137d8ea6
+[2022-12-12 13:10:39,027] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=prepare_data
+AIRFLOW_CTX_TASK_ID=transfer_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-28T23:51:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-28T23:51:00+00:00
+[2022-12-12 13:10:39,323] {base.py:68} INFO - Using connection ID 'postgres_default' for task execution.
+[2022-12-12 13:10:39,779] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-12 13:10:39,974] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=prepare_data, task_id=transfer_data, execution_date=20221128T235100, start_date=20221212T131037, end_date=20221212T131039
+[2022-12-12 13:10:40,170] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 13:10:40,587] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
