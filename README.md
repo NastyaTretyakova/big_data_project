@@ -51,3 +51,6 @@ The python service simulates an iOS device that generates events from hardware o
 11. Run Dag "prepare_data"
 
 11. Success!)
+
+
+P.S. If you want to assure that everything works, you can go to SQL app (whatever you prefer to use), then connect to the table "prepared_data" and run command "select count(*) from prepared_data" twice. If returned numbers will be different, it means that scripts works and data is inserted into the database
