@@ -4,9 +4,12 @@ Big Data project
 The python service simulates an iOS device that generates events from hardware once every 1 second. The service must write data to Kafka Producer in real time. The Kafka Consumer service must connect to the topic, read all messages and write to the database. The Airflow DAG will subtract all accumulated data in the stg layer, filter the data with negative temperature and write it to the dds layer.
 
 
+# Hardware requirements
+- RAM >= 4000 MB;
+- Ubuntu not older than 3.10
+
 # System requirements
 - OS Ubuntu (64-bit);
-- RAM >= 4000 MB;
 - Python interpreter installed;
 - Docker tool installed;
 - Docker Compose intsalled;
