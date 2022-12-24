@@ -26,7 +26,7 @@ The python service simulates an iOS device that generates events from hardware o
 	```
 4. The `docker-compose up -d` will up docker containers and then display the following logs in terminal.
 
-5. After building docker containers, create additional window in terminal and run there next command:
+5. After building docker containers (We kindly draw your attention to the fact that all containers must rise. Otherwise, for example, if the kafka container does not rise, further scripts won't be able to work), create additional window in terminal and run there next command:
    ```
 	python3 producer.py
 	```
