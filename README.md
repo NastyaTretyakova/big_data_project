@@ -54,3 +54,5 @@ The python service simulates an iOS device that generates events from hardware o
 
 
 P.S. If you want to assure that everything works, you can go to SQL app (whatever you prefer to use), then connect to the table "prepared_data" and run command "select count(*) from prepared_data" twice. If returned numbers will be different, it means that scripts works and data is inserted into the database
+
+P.P.S. If you want to find out about structure of this project and so on, we highly recommend you to visit file "presentation_big_data.pptx", where you can find a lot of interesting information (slide № 3 tells about the architecture)
