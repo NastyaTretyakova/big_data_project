@@ -24,7 +24,7 @@ The python service simulates an iOS device that generates events from hardware o
 	```
 	sudo docker-compose up
 	```
-4. The `docker-compose up` will up docker containers and then display the following logs in terminal.
+4. The `docker-compose up -d` will up docker containers and then display the following logs in terminal.
 
 5. After building docker containers, create additional window in terminal and run there next command:
    ```
