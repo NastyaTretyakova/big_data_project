@@ -46,6 +46,8 @@ The python service simulates an iOS device that generates events from hardware o
 
 9. Add connection to airflow: Go to Admin and click on the button "Connection". Write connection id = postgres_default, login = test, password = test, host = db, port = 5432 and click "Save"!
 
-10. Run Dag "prepare_data"
+10. Activate Dag "prepare_data" (move the toggle switch "prepare_data" to the on position)
+
+11. Run Dag "prepare_data"
 
 11. Success!)
