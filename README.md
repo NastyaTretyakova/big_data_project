@@ -5,6 +5,12 @@ The python service simulates an iOS device that generates events from hardware o
 
 
 # System requirements
+- OS Ubuntu (64-bit);
+- RAM >= 4000 MB;
+- Python interpreter installed;
+- Docker tool installed;
+- Docker Compose intsalled;
+- Python packages installed: json, psycopg2, confluent_kafka, airflow, requests, logging, threading, time, dataclasses, datetime.
 
 # Installation steps
 
@@ -36,7 +42,7 @@ The python service simulates an iOS device that generates events from hardware o
 	```
 	You will see the main page of the airflow.
 
-6. Enter username = gpadmin and password = pivotal
+6. Enter username = gpadmin and password = pivotal into 
 
 7. Add connection to airflow: Go to Admin and click on the button "Connection". Write connection id = postgres_default, login = test, password = test, host = db, port = 5432 and click "Save"!
 
