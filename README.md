@@ -31,21 +31,21 @@ The python service simulates an iOS device that generates events from hardware o
 	python3 producer.py
 	```
 
-5. Then create one more window in terminal and run there next command:
+6. Then create one more window in terminal and run there next command:
    ```
 	python3 consumer.py
 	```
 
-5. Tap on your web browser link:
+7. Tap on your web browser link:
    ```
 	https://localhost:8080
 	```
 	You will see the main page of the airflow.
 
-6. Enter username = gpadmin and password = pivotal into 
+8. Enter username = gpadmin and password = pivotal into the authorization form on the main page of the airflow
 
-7. Add connection to airflow: Go to Admin and click on the button "Connection". Write connection id = postgres_default, login = test, password = test, host = db, port = 5432 and click "Save"!
+9. Add connection to airflow: Go to Admin and click on the button "Connection". Write connection id = postgres_default, login = test, password = test, host = db, port = 5432 and click "Save"!
 
-8. Run Dag "prepare_data"
+10. Run Dag "prepare_data"
 
-9. Success!)
+11. Success!)
